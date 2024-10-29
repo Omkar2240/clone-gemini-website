@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: #131314;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  animation: fadeIn 1.5s;
+}
+
+span {
+  background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+#resultScroll::-webkit-scrollbar{
+  display:  none;
+}
+
+@keyframes loader {
+    0%{
+      background-position: -800px 0px;
+    }  
+    100%{
+      background-position: 800px 0px;
+    }
+}
+
+hr{
+  animation: loader 3 infinite linear;
+  background: linear-gradient(to right, #4fb0f6, #131314,#4fb0f6);
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
